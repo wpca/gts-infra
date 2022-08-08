@@ -27,7 +27,13 @@
             "value": "jga"
         },
         "administratorLoginPassword": {
-            "value": null
+            "reference": 
+        {
+            "keyVault": {
+            "id": "/subscriptions/7d0be960-257e-4c4c-9d03-152ad40281d5/resourceGroups/CH-NO-GTS-RG01/providers/Microsoft.KeyVault/vaults/gtsinfra"
+                },
+            "secretName": "adminsqlpwd"
+        }
         },
         "administrators": {
             "value": {
