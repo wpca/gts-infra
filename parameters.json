@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "allowAzureIps": {
+            "value": false
+        },
+        "enableADS": {
+            "value": false
+        },
+        "location": {
+            "value": "switzerlandnorth"
+        },
+        "serverName": {
+            "value": "testjga"
+        },
+        "enableVA": {
+            "value": false
+        },
+        "useVAManagedIdentity": {
+            "value": false
+        },
+        "serverTags": {
+            "value": {}
+        },
+        "administratorLogin": {
+            "value": "jga"
+        },
+        "administratorLoginPassword": {
+            "value": null
+        },
+        "administrators": {
+            "value": {
+                "administratorType": "activeDirectory",
+                "login": "adm-jgarin@waypointgrp.onmicrosoft.com",
+                "sid": "e1552a2a-bbcf-44b7-bee1-8d38b1981ad6",
+                "tenantId": "676fb8eb-203e-4f75-886f-c7745eec03f5",
+                "azureADOnlyAuthentication": false,
+                "principalType": "User"
+            }
+        }
+    }
+}
