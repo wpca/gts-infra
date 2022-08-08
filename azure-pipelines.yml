@@ -17,8 +17,6 @@ steps:
     location: 'Switzerland North'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/wpca/gts-infra/main/template.json?token=GHSAT0AAAAAABXNU73V32QUSVBDIKRVZWCUYXRCL3Q'
-    overrideParameters: |
-      -serverName testserverjga
-      -administratorLogin jga
+    csmParametersFileLink: 'https://raw.githubusercontent.com/wpca/gts-infra/main/parameters.json?token=GHSAT0AAAAAABXNU73VXUHWAO2A4QQTCYHMYXRCPRQ'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
