@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureRMPipeline-conn'
+    subscriptionId: '7d0be960-257e-4c4c-9d03-152ad40281d5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'CH-NO-GTS-RG01'
+    location: 'Switzerland North'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/wpca/gts-infra/main/template.json?token=GHSAT0AAAAAABXNU73VU7LEBVS7OQ6XJSQUYXRCANA'
+    overrideParameters: |
+      -serverName testserverjga
+      -administratorLogin jga
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
